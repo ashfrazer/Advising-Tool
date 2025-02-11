@@ -29,7 +29,7 @@ Steps to run this project:
     method VARCHAR(10),
     start_date VARCHAR(10),
     end_date VARCHAR(10),
-    attribute VARCHAR(20)
+    attribute VARCHAR(20));
    `
    This creates the *courses* table required for this project.
 4) Right-click the CSV files under `src/main/resources/CSV`. There should be two: `FA21 Course Data.csv` and `SP21 Course Data.csv`. Select *import to database*. Ensure the schema is `public`, which should be found under your postgreSQL connection. Under "Table", select the arrow and choose *courses*.
