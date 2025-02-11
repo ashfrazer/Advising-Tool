@@ -33,8 +33,9 @@ public class DataAccessObject {
         return result;
     }
     // Create courses table
-    public void createTable() throws SQLException {
-        String query = "CREATE TABLE courses (\n" +
+    public void createTable() {
+        String query =
+                "CREATE TABLE IF NOT EXISTS courses (\n" +
                 "    CRN SERIAL PRIMARY KEY,\n" +
                 "    subj_code VARCHAR(4),\n" +
                 "    crse_num VARCHAR(4),\n" +
@@ -54,7 +55,14 @@ public class DataAccessObject {
                 "    end_date VARCHAR(10),\n" +
                 "    attribute VARCHAR(20)\n" +
                 ");";
-        runQuery(query);
+
+        try (Connection conn = createDataSource().getConnection();
+             Statement stmt = conn.createStatement()) {
+            stmt.executeUpdate(query);
+            System.out.println("Table creation (or check) successful.");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     // Get subject codes
