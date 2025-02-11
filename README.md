@@ -9,7 +9,8 @@ I understand this isn't the most convenient way to set up the database. I am sti
 Steps to run this project:
 
 1) Clone the repository.
-2) Open the postgreSQL console. Enter the query:
+2) Update the `pw` variable for your specific postgres@localhost password.
+3) Open the postgreSQL console. Enter the query:
    `CREATE TABLE courses (
     CRN SERIAL PRIMARY KEY,
     subj_code VARCHAR(4),
