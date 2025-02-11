@@ -9,13 +9,13 @@ import java.util.List;
 public class DataAccessObject {
     private static final String url = "jdbc:postgresql://localhost:5432/postgres";
     private static final String user = "postgres";
-    private static final String pw = "post";
+    private static final String pw = "post"; // ADJUST TO YOUR PASSWORD
 
     private static DataSource createDataSource() {
         PGSimpleDataSource dataSource = new PGSimpleDataSource();
         dataSource.setDatabaseName("postgres");
-        dataSource.setUser("postgres");
-        dataSource.setPassword("post");
+        dataSource.setUser(user);
+        dataSource.setPassword(pw);
         return dataSource;
     }
 
@@ -31,6 +31,29 @@ public class DataAccessObject {
             }
         }
         return result;
+    }
+    // Create courses table
+    public void createTable() throws SQLException {
+        String query = "CREATE TABLE courses (\n" +
+                "    CRN SERIAL PRIMARY KEY,\n" +
+                "    subj_code VARCHAR(4),\n" +
+                "    crse_num VARCHAR(4),\n" +
+                "    credit_hrs INT,\n" +
+                "    semester VARCHAR(15),\n" +
+                "    title VARCHAR(30),\n" +
+                "    instr_name VARCHAR(25),\n" +
+                "    meet_days1 VARCHAR(7),\n" +
+                "    begin_time1 VARCHAR(15),\n" +
+                "    end_time1 VARCHAR(15),\n" +
+                "    meet_days2 VARCHAR(7),\n" +
+                "    begin_time2 VARCHAR(15),\n" +
+                "    end_time2 VARCHAR(15),\n" +
+                "    schedule_desc VARCHAR(15),\n" +
+                "    method VARCHAR(10),\n" +
+                "    start_date VARCHAR(10),\n" +
+                "    end_date VARCHAR(10),\n" +
+                "    attribute VARCHAR(20)\n" +
+                ");";
     }
 
     // Get subject codes
