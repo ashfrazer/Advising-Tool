@@ -33,5 +33,7 @@ Steps to run this project:
 );
    `
    This creates the *courses* table required for this project.
-4) Right-click the CSV files under `src/main/resources/CSV`. There should be two: `FA21 Course Data.csv` and `SP21 Course Data.csv`. Select *import to database*. Ensure the schema is `public`, which should be found under your postgreSQL connection. Under "Table", select the arrow and choose *courses*.
+4) Right-click the CSV files under `src/main/resources/CSV`. There should be two: `FA21 Course Data.csv` and `SP21 Course Data.csv`. Select *import to database*. Click *Schema*, then expand *postgres@localhost*, and then expand *postgres* (or whatever your localhost PostgreSQL connection name is). Choose *public*. In the field *Table* (under *Schema*), select the arrow and choose *courses*. **Typing out courses may not work. You must select courses from the dropdown menu.*
 5) Now, run the program normally and interact with the interface.
+
+Finally, I want to note that there are some commands through PostgreSQL that will import databases into tables. I had no luck with them. I will explore this option as the project develops!
