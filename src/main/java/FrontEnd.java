@@ -15,9 +15,6 @@ public class FrontEnd {
         backEnd = new BackEnd();
 
         try {
-            // Create table
-            backEnd.createTable();
-
             // Get subjects
             List<String> subjectsList = backEnd.getSubjects();
 

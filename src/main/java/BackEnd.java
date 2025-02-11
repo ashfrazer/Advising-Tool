@@ -10,10 +10,6 @@ public class BackEnd {
         this.dataAccessObject = new DataAccessObject();
     }
 
-    // Create table
-    public void createTable() throws SQLException {
-        dataAccessObject.createTable();
-    }
     // Get subjects
     public List<String> getSubjects() throws SQLException {
         return dataAccessObject.getSubjects();
