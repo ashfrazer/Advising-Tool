@@ -54,6 +54,7 @@ public class DataAccessObject {
                 "    end_date VARCHAR(10),\n" +
                 "    attribute VARCHAR(20)\n" +
                 ");";
+        runQuery(query);
     }
 
     // Get subject codes
