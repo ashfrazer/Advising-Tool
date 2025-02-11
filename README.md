@@ -32,5 +32,5 @@ Steps to run this project:
     attribute VARCHAR(20)
    `
    This creates the *courses* table required for this project.
-4) Right-click the CSV files under `src/main/resources/CSV`. There should be two: `FA21 Course Data.csv` and `SP21 Course Data.csv`. Select *import to database*. Ensure the schema is `public`, which should be found under your postgreSQL connection. Also ensure that the table the data is being imported to is *courses*.
+4) Right-click the CSV files under `src/main/resources/CSV`. There should be two: `FA21 Course Data.csv` and `SP21 Course Data.csv`. Select *import to database*. Ensure the schema is `public`, which should be found under your postgreSQL connection. Under "Table", select the arrow and choose *courses*.
 5) Now, run the program normally and interact with the interface.
